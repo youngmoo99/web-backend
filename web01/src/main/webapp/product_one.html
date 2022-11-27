@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- cdn 방식으로 연결 -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<style>
+</style>
+</head>
+<body>
+	<h2>상품검색 페이지</h2>
+	<form action="product_one.jsp">
+		<table class="table-dark table-striped">
+			<tr>
+				<th>항목명</th>
+				<th>입력</th>
+
+			</tr>
+			<tr>
+				<td>검색할 아이디 : </td>
+				<td><input name="id" value="110"></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2"><button type="submit" class="btn btn-info">검색</button></td>
+
+			</tr>
+		</table><br>
+	</form><br>
+	<a href="http://localhost:9999/web01/product_one.jsp?id=100"><button>100의 정보</button></a>
+	<a href="http://localhost:9999/web01/product_one.jsp?id=101"><button>101의 정보</button></a>
+	<a href="http://localhost:9999/web01/product_one.jsp?id=102"><button>102의 정보</button></a>
+	<a href="product.html"><button>첫페이지</button></a>
+	<form action="img_list.jsp">
+	<button>이미지정보</button>
+	</form>
+	
+</body>
+</html>

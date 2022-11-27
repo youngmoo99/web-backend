@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/out.css">
+</head>
+<body>
+<hr style="width: 500px; height: 15px;">
+<form action="insert.jsp"> <!-- action 에는 서버에서 받아서 처리할 페이지를 지정 -->
+<!-- 1.데이터를 받아서, 2.sql문을 만들어서, 3.결과를 html로 만들어야 하는 페이지  -->
+<!-- 1~3까지는 자바로 구현, 서버쪽 자바 기술 : 서블릿,jsp(*)   -->
+<table border="1">
+	<tr>
+		<th>데이터</th>
+		<th>입력항목</th>
+	</tr>
+	<tr align="center">
+		<td>아이디 입력</td>
+		<td><input type ="text" name="id"></td>
+	</tr>
+	<tr>
+		<td>패스워드 입력</td>
+		<td><input type ="password" name="pw"></td>
+	</tr>
+	<tr align="center">
+		<td>이름 입력</td>
+		<td><input type ="text" name="name"></td>
+	</tr>
+	<tr align="center">
+		<td>전화번호 입력</td>
+		<td><input type ="text" name="tel"></td>
+	</tr>
+	<tr>
+	<td colspan="2" align ="center">
+	<button style="background: black; color:white; ">회원가입 정보 서버로 전송</button>
+	</td>
+	</tr>
+	
+</table>
+</form>
+
+<form action = "member_all.jsp">
+<button style="background: purple; color: yellow;"> 전체 조회</button>
+
+</form>
+<form action = "select.jsp">
+검색할 id : <input type = "text" name = "id2"><br>
+<button style="background: pink; color: black; ">검색하기</button><br><br>
+</form>
+
+
+<form action = "url_test.jsp">
+<button style="background: purple; color: yellow;"> 조회 테스트</button>
+
+</form>
+</body>
+</html>

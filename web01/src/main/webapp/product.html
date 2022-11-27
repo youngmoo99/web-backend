@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- cdn 방식으로 연결 -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+	<h2>HTML Table</h2>
+	<table>
+		<tr>
+			<th>항목명</th>
+			<th>링크</th>
+
+		</tr>
+		<tr>
+			<td>상품등록</td>
+			<td><a href="product_insert.html"><button class="btnbtn-success">상품등록
+					</button>
+			</a></td>
+
+		</tr>
+		<tr>
+			<td>상품삭제</td>
+			<td><a href="product_delete.html"><button
+						class="btn btn-danger">상품삭제</button></a></td>
+		</tr>
+		<tr>
+			<td>상품수정</td>
+			<td><a href="product_update.html"><button
+						class="btn btn-info">상품수정</button></a></td>
+		</tr>
+		<tr>
+			<td>상품검색(one)</td>
+			<td><a href="product_one.html"><button class="btn">상품검색(one)</button></a>
+			</td>
+		</tr>
+		<tr>
+			<td>상품검색(all)</td>
+			<td><a href="product_all.jsp"><button class="btn btn-dark">상품전체검색</button></a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
