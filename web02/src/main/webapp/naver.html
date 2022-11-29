@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>회원 가입</h3>
+<form action ="naver.jsp">
+아이디  <br>
+<input type ="text" name = "id"> <br><br>
+비밀번호 <br>
+<input type ="password" name ="pw"> <br><br>
+
+비밀번호 재확인 <br>
+<input type= "password" name="pw2"><br><br>
+
+이름 <br>
+<input type ="text" name="name"><br><br>
+
+생년월일 <br>
+<input type="text" name ="year" placeholder="년(4자)"> 
+<select name ="month">
+		<option value="zero">월
+		<option value="1">1
+		<option value="2">2
+		<option value="3">3
+		<option value="4">4
+		<option value="5">5
+		<option value="6">6
+		<option value="7">7
+		<option value="8">8
+		<option value="9">9
+		<option value="10">10
+		<option value="11">11
+		<option value="12">12
+</select>
+<input type="text" name="day" placeholder="일"><br><br>
+
+성별 <br>
+<select name="gender">
+<option value ="성별">성별
+<option value ="male">남자
+<option value ="female">여자
+<option value ="unknown">선택 안함
+</select> <br>
+
+본인 확인 이메일 (선택)<br>
+<input type="email" name="email" placeholder="선택입력"><br><br>
+
+휴대전화 <br>
+<select name ="Country">
+		<option value="korea">대한민국 +82
+		<option value="Nepal">네팔 +977
+		<option value="Japan">일본 +81
+		<option value="Australia">호주 +61
+		<option value="China">중국 +86
+		<option value="Russia">러시아/카자흐스탄 +7
+		<option value="India">인도 +91 
+		<option value="USA">미국/캐나다 +1
+		<option value="Hongkong">홍공 +852
+		<option value="Germany">독일 +49
+</select>
+<br>
+<input type="text" name="tel" placeholder="전화번호 입력"><br><br>
+
+관심사 <br>
+<input type="checkbox" name="hobby" value="카페">카페
+	<input type="checkbox" name="hobby" value="메일">메일
+	<input type="checkbox" name="hobby" value="뉴스">뉴스
+	<input type="checkbox" name="hobby" value="쇼핑">쇼핑 
+	<input type="checkbox" name="hobby" value="서적">서적<br><br>
+
+하고싶은말  <br>
+	<textarea cols="10" rows="5" name="good"></textarea> <br><br>
+	
+	<input type="submit" value="가입하기">
+
+
+
+</form>
+</body>
+</html>
