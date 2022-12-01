@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+	$(function () {
+		//아이디가 b1인 것을 클릭했을때, 이렇게 처리해줘 
+		//documnet.getElementById('b1')==> $('#b1') 과 동일
+		$('#b1').click(function () {
+			//alert('b1 버튼을 클릭하셨군요')
+			food = $('#food').val() 
+			where = $('#where').val() 
+			alert('당신이 먹고싶은 음식은 '+food+' 이고 가고싶은곳은 '+where +'군요'                                                                                                                                                                                                               )
+		})
+		$('#b2').click(function() {
+			site = $('#site').val()
+			
+			if(site =='movie'){
+				location.replace('http://www.cgv.co.kr/ticket/')
+			}else{
+				location.replace('https://www.skyscanner.co.kr/')
+			}
+			
+		})
+		
+	})
+</script>
+</head>
+<body>
+먹고 싶은 음식: <input id='food'> <br>
+가고싶은곳 : <input id='where'> <br>
+<button id = 'b1'>음식 여행</button><br><br>
+
+사이트 : <input id='site'> <br>
+<button id = 'b2'>사이트 이동</button>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//id pw를 입력받아서 id가 root, pw가 1234인지 판별, 맞으면 로그인성공, 아니면 로그인 실패 
+function login() {
+ id = document.getElementById('user').value
+ pw = document.getElementById('pw').value
+ 
+ 
+ if (id == 'root' && pw == '1234') {
+	alert('로그인 성공')
+}else {
+	alert('로그인 실패')
+}
+}
+
+function age() {
+	year = document.getElementById('year').value
+	age = 2022 - parseInt(year)+ 1
+	
+	alert("당신의 나이는 "+age+"살 입니다.")
+}
+
+function rec() {
+	width = document.getElementById('w').value
+	height = document.getElementById('h').value
+	area = parseFloat(width) * parseFloat(height)
+	
+	alert("사각형 넓이는 "+ area)
+}
+</script>
+</head>
+<body>
+아이디 입력 : <input id='user'> <br>
+패스워드 입력 : <input id = 'pw'> <br>
+<button onclick="login()">로그인 처리</button>
+
+<br><br>
+나이 계산(태어난 연도) : <input id='year'><br>
+<button onclick='age()'>나이계산 </button>
+
+<br><br>
+가로길이 : <input id='w'><br>
+세로길이 : <input id ='h'><br>
+<button onclick="rec()">사각형 면적</button>
+</body>
+</html>

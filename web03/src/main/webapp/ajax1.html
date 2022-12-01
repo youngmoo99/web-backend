@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+</script>
+
+<script>
+	$(function() { //익명함수
+		$('#b1').click(function() {
+			$.ajax({ //ajax
+				url : "ok.html",
+				success : function(a) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('성공')
+					$('#d1').html('받은데이터는 '+a)
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+		$('#b2').click(function() {
+			$.ajax({ //ajax
+				url : "weather.html",
+				success : function(x) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('날씨 성공')
+					$('#d2').html('받은데이터는 '+x)
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+		$('#b3').click(function() {
+			$.ajax({ //ajax
+				url : "tour.html",
+				success : function(e) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('여행 성공')
+					$('#d3').html('받은데이터는 '+e)
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+	})
+</script>
+
+</head>
+<body>
+<!-- <a href="ok.html">공공데이터 포탈 요청</a> -->
+<button id="b1">공공데이터 포탈요청</button>
+<button id="b2">공공데이터 포탈요청</button>
+<button id="b3">공공데이터 포탈요청</button>
+<hr>
+<div id="d1" style="background : yellow;"></div> <br>
+<div id="d2" style="background : lime;"></div> <br>
+<div id="d3" style="background : purple;"></div> <br>
+</body>
+</html>

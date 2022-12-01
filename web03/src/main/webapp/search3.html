@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+	
+</script>
+
+<script>
+//body 부분을 DOM-Tree 로 읽어서 준비가되면, 입력값으로 있는 익명함수를 실행해주세요 
+
+	
+	$(function() { //익명함수
+		//버튼이클릭되면 함수부분을 호출해주세요 (콜백함수)
+		//html 태그중에서 선택할 수 있는 방법 3가지 (태그명, 클래스명, id명) 
+	$('button').click(function(){
+		word = $('#shop').val()
+		location.href ="https://store.kakao.com/search/result/product?q="+word
+
+	})
+				
+	})
+</script>
+
+</head>
+<body>
+당신이 사고싶은 것은? : <input id="shop">
+<button>카카오 쇼핑 검색 시작</button>
+
+</body>
+</html>

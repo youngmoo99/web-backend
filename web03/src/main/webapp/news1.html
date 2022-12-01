@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(function() {
+	 $('#b1').click(function() { //결제하기 버튼       
+	        //원하는 곳에서 아무때나 페이지를 넘기지 않고, 서버와
+	        
+	        $('div').empty()
+	        //통신하고자 하는 경우 ajax(비동기통신)
+	        $.ajax({
+	        	
+	            url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.hankyung.com%2Ffeed%2Fhei.xml&api_key=rasisjsazzclmn5jobtq5rw30guf3vvnklvkliey',
+	            data : {
+	            	url: 'https://rss.hankyung.com/feed/hei.xml',
+	            		api_key : "rasisjsazzclmn5jobtq5rw30guf3vvnklvkliey",
+	            		count : 20
+	            		
+	            },
+	            success: function(x) { //x=jsp파일의 실행결과
+	                alert('서버와의 통신 성공')
+	            	list = x.items
+	            	alert(list.length)
+	               
+	                for (var i = 0; i < list.length; i++) {
+						t = list[i].title
+						p = list[i].pubDate
+						l = list[i].link
+						a = "<a href=" + l + ">" + t + "</a>"
+	                $('div').append(t+" "+p+" "+l+""+a+"<br>")
+						
+	                }
+	          }
+	        })
+	    })
+	     $('#b2').click(function() { //스포츠 기사 불러오기    
+	        //원하는 곳에서 아무때나 페이지를 넘기지 않고, 서버와
+	        
+	        $('div').empty()
+	        //통신하고자 하는 경우 ajax(비동기통신)
+	        $.ajax({
+	        	
+	            url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.hankyung.com%2Ffeed%2Fsports.xml&api_key=rasisjsazzclmn5jobtq5rw30guf3vvnklvkliey',
+	            data : {
+	            	url: 'https://rss.hankyung.com/feed/sports.xml',
+	            		api_key : "rasisjsazzclmn5jobtq5rw30guf3vvnklvkliey",
+	            		count : 20
+	            		
+	            },
+	            success: function(x) { //x=jsp파일의 실행결과
+	                alert('서버와의 통신 성공')
+	            	list = x.items
+	            	alert(list.length)
+	               
+	                for (var i = 0; i < list.length; i++) {
+						t = list[i].title
+						at = list[i].author
+						l = list[i].link
+						a = "<a href=" + l + ">" + t + "</a>"
+	                $('div').append(t+" "+a+" "+l+""+at+"<br>")
+						
+	                }
+	          }
+	        })
+	    })
+   
+ 
+})
+</script>
+</head>
+<body bgcolor="pink">
+    <h3>달러 환율 비교</h3>
+   신문뉴스 데이터 받아오기(ajax)
+    
+    <button style='color: blue; background: green' id='b1'>연예인 기사(한경)</button>
+    <button style='color: blue; background: green' id='b2'>스포츠 기사(한경)</button>
+   
+    <div></div>
+</body>
+</html>

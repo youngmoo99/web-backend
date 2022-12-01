@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(function() {
+	 $('#b1').click(function() { //결제하기 버튼
+	        moneyValue = $('#money').val()
+	        choiceValue = $('#choice').val()
+	        //원하는 곳에서 아무때나 페이지를 넘기지 않고, 서버와
+	        //통신하고자 하는 경우 ajax(비동기통신)
+	        $.ajax({
+	            url: 'money.jsp',
+	            data: {
+	                money : moneyValue,
+	                choice : choiceValue
+	            },
+	            success: function(x) { //x=jsp파일의 실행결과
+	                alert('서버와의 통신 성공')
+	                alert('응답받은 내용: ' + x)
+	                $('div').html('<font color=red>결제결과는: ' + x)
+	                }
+	        })
+	    })
+    $('#b2').click(function() { // id중복체크 버튼 
+        idValue = $('#id').val()
+
+        $.ajax({
+            url: 'idCheck.jsp',
+            data: {
+                id : idValue
+            },
+            success: function(x) { //x=jsp파일의 실행결과
+                alert('서버와의 통신 성공')
+                alert('응답받은 내용: ' + x)
+                $('div').html('<font color=red>응답받은 내용: ' + x + '</font>')
+                }
+        })
+    })
+     $('#b3').click(function() { // id중복체크 버튼 
+        phoneValue = $('#tel').val()
+
+        $.ajax({
+            url: 'phone.jsp',
+            data: {
+                tel : phoneValue
+            },
+            success: function(x) { //x=jsp파일의 실행결과
+                alert('서버와의 통신 성공')
+                alert('응답받은 내용: ' + x)
+                $('div').html('<font color=red>도착한 인증문자: ' + x + '</font>')
+                }
+        })
+    })
+    
+})
+</script>
+</head>
+<body bgcolor="pink">
+    <h3>비동기통신으로 서버와 통신하기</h3>
+    ajax테스트: <input type="text" id='test'>
+    <button id='b4'>ajax테스트(test.jsp)</button>
+    <br>
+    <!--test에 입력한 id값을 서버에서 받아..id님 환영합니다.!!이라고
+     div에 넣어보세요. test.jsp-->
+    결제금액 :
+    <input type="text" id="money">
+    <br> 1)계좌이체, 2)신용카드, 3)휴대폰결제
+    <br> 결제수단 :
+    <input type="text" id="choice">
+    <button style='color: blue; background: green' id='b1'>결제하기</button>
+    <hr color="red">
+    회원가입할 id입력:
+    <input type="text" id='id'>
+    <button style='color: blue; background: yellow' id='b2'>회원가입시
+        id중복 체크</button>
+    <hr color="red">
+    인증받을 전화번호 입력:
+    <input type="text" id='tel'>
+    <button style='color: blue; background: fuchsia;' id='b3'>인증번호
+        받기</button>
+    <hr color="green">
+    <div></div>
+</body>
+</html>

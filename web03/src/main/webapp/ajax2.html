@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+</script>
+
+<script>
+	$(function() { //익명함수
+		$('#b1').click(function() {
+			$.ajax({ //ajax
+				url : "data/rank.xml",
+				success : function(a) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('성공')
+					$('#d1').html('받은데이터는 '+a+'<br>')
+					list = $(a).find('rank') // find결과가 여러개 --> 배열 
+					alert(list.length + "개")
+					for (var i = 0; i < list.length; i++) {
+						
+						name = $(list[i]).find('name').text()
+						age = $(list[i]).find('age').text()
+						
+						$('#d1').append(name+ ", "+age+"세<br>")
+					}
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+		$('#b2').click(function() {
+			$.ajax({ //ajax
+				url : "data/rank.json",
+				success : function(x) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('json 성공')
+					$('#d2').html('받은데이터는 '+x+"<br>")
+					list = x.rank // 받은 데이터에서 rank키의 값을 리스트(배열)로 추출 
+					alert(list.length + "개")
+					for (var i = 0; i < list.length; i++) {
+						name = list[i].name 
+						age = list[i].age
+						$('#d2').append(name+", "+age+"세<br>")
+					}
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+		$('#b4').click(function() {
+			$.ajax({ //ajax
+				url : "data/dataset.xml",
+				success : function(e) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('성공')
+					$('#d4').html('받은데이터는 '+e+'<br>')
+					list = $(e).find('record') // find결과가 여러개 --> 배열 
+					alert(list.length + "개")
+					for (var i = 0; i < list.length; i++) {
+						
+						id = $(list[i]).find('id').text()
+						first_name = $(list[i]).find('first_name').text()
+						last_name = $(list[i]).find('last_name').text()
+						email = $(list[i]).find('email').text()
+						gender = $(list[i]).find('gender').text()
+						address = $(list[i]).find('address').text()
+						
+						$('#d4').append(id+ "의 회원 정보, 성함: "+first_name+last_name+ ", 이메일 : "+email+ ", 성별 : "+gender+ ", 주소 : "+address+"<br>")
+					}
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+		
+		$('#b3').click(function() {
+			$.ajax({ //ajax
+				url : "data/rank3.xml",
+				success : function(d) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('성공')
+					$('#d3').html('받은데이터는 '+d+'<br>')
+					list = $(d).find('winner') // find결과가 여러개 --> 배열 
+					alert(list.length + "개")
+					for (var i = 0; i < list.length; i++) {
+						
+						year = $(list[i]).find('year').text()
+						class1 = $(list[i]).find('class').text()
+						name = $(list[i]).find('name').text()
+						field = $(list[i]).find('field').text()
+						
+						$('#d3').append(year+ "년 "+class1+"학년 "+name+"씨 "+field+"<br>")
+					}
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+		
+		$('#b5').click(function() {
+			$.ajax({ //ajax
+				url : "data/MOCK_DATA.json",
+				success : function(y) {
+					//ok.html 요청시 성공하면 처리할부분 넣는곳 
+					alert('json 성공')
+					
+					list = y // 받은 데이터에서 rank키의 값을 리스트(배열)로 추출 
+					alert(list.length + "개")
+					for (var i = 0; i < list.length; i++) {
+						id = list[i].id
+						name = list[i].name 
+						email = list[i].email
+						gender = list[i].gender
+						$('#d5').append("아이디 : "+id+", 이름 : "+name+", 이메일 : "+email+", 성별 : "+gender+"<br>")
+					}
+					
+				},
+				error : function() {
+					//ok.html 요청시 실패하면 처리할부분 넣는곳 
+					alert('실패')
+				}
+			})
+			
+		})
+	})
+</script>
+
+</head>
+<body>
+<!-- <a href="ok.html">공공데이터 포탈 요청</a> -->
+<button id="b1">xml받아오기</button>
+<button id="b2">json받아오기</button>
+<button id="b3">xml3받아오기</button>
+<button id="b4">mockaroo 샘플데이터 xml 받아오기</button>
+<button id="b5">mockaroo 샘플데이터 json 받아오기</button>
+
+<hr>
+<div id="d1" style="background : yellow;"></div> <br>
+<div id="d2" style="background : lime;"></div> <br>
+<div id="d3" style="background : pink;"></div> <br>
+<div id="d4" style="background : skyblue;"></div> <br>
+<div id="d5" style="background : orange;"></div> <br>
+
+</body>
+</html>
