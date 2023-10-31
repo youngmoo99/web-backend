@@ -12,8 +12,7 @@ public class Car2 {
 		if (car2 == null) {
 			car2 = new Car2();
 		}
-		return car2;
-		
+		return car2;		
 	}
 	
 }
