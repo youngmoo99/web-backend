@@ -9,7 +9,7 @@
     <%
     //자바코드를 일부 넣는 부분, 작은 프로그램의 일부분(let,릿) 
     // 자바코드를 그냥 스크립트쓰듯이 쓰면 됨. 
-    //스크립트릿(scriptlet)
+    // 스크립트릿(scriptlet)
     //HttpRequestServlet request = new HttpRequestServlet(); 내장된 객체
     // 미리 reqeust라는 이름의 객체를 만들어서 제공
     
