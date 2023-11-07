@@ -17,7 +17,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Insert title here!</title>
 </head>
 <body>
 서버에서 받은 hobby >> <%=result %><br>
