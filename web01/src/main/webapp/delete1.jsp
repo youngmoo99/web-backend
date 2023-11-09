@@ -37,7 +37,6 @@ background: orange;
 <body>
 <h1><%= id%>의 게시판 삭제가 완료되었습니다</h1>
 <hr>
-
 <a href="bbs.html">앞페이지로 가기</a>
 </body>
 </html>
