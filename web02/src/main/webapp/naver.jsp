@@ -26,8 +26,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-서버에서 받은 아이디 >> <%=id %><br>
-서버에서 받은 비밀번호 >> <%=pw %><br>
+서버에서 받은 아이디 >> <%=id %> <br>
+서버에서 받은 비밀번호 >> <%=pw %> <br>
 서버에서 받은 이름 >> <%=name %><br>
 서버에서 받은 생년월일 >> <%=year %>년 <%=month %>월 <%=day %>일  <br>
 서버에서 받은 성별 >> <%=gender %><br>
