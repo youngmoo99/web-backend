@@ -29,7 +29,7 @@
 %>
 <tr>
 <td><%=s%></td>
-<td><a href ="http://localhost:9999/web01/product_one.jsp?id=111<%= s%>"><img src="./img/<%= s%>"></a>
+<td><a href ="http://localhost:9999/web01/product_one.jsp?id=111<%= s%>"><img src="./img/<%= s%>"> </a>
 </td>
 </tr>
 
