@@ -16,7 +16,7 @@ public class MemberServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("insert.do 주소가 요청됨 ");
 		
-		//String id = null; // 지역변수!, 쓰레기 값이 들어잇음
+		// String id = null; // 지역변수!, 쓰레기 값이 들어잇음
 		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
