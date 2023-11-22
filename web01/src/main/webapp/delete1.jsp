@@ -11,7 +11,7 @@
     // 자바코드를 그냥 스크립트쓰듯이 쓰면 됨. 
     // 스크립트릿(scriptlet)
     //HttpRequestServlet request = new HttpRequestServlet(); 내장된 객체
-    // 미리 reqeust라는 이름의 객체를 만들어서 제공
+    //  미리 reqeust라는 이름의 객체를 만들어서 제공
     
   String id = request.getParameter("id3"); // <input name ="id">, 외부에서 입력한 데이터타입(String)
   gasifanDAO dao = new gasifanDAO();
