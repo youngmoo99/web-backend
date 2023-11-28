@@ -25,7 +25,7 @@
 서버에서 받은 pw >> <%=pw %><br>
 서버에서 받은 name >> <%=name %><br>
 서버에서 받은 gender >> <%=gender %><br>
-서버에서 받은 religion >> <%=religion %><br>
+서버에서 받은 religion >> <%=religion %> <br>
 서버에서 받은 introduction >> <%=introduction %><br>
 
 
