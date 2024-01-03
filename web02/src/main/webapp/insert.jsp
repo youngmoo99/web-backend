@@ -27,5 +27,6 @@
 서버에서 받은 gender >> <%=gender %><br>
 서버에서 받은 religion >> <%=religion %> <br>
 서버에서 받은 introduction >> <%=introduction %><br>
+
 </body>
 </html>
