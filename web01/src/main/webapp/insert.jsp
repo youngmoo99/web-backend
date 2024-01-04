@@ -17,7 +17,6 @@
   	String name = request.getParameter("name");
   	String tel = request.getParameter("tel");
   	
-  	
   	MemberVO bag = new MemberVO();
   	bag.setId(id);
   	bag.setPw(pw);
