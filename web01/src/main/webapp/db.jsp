@@ -14,7 +14,6 @@
 	
 	MemberDAO dao = new MemberDAO();
 	int result = dao.login(bag); // 1 or 다른값 
-	
 	//3)출력 (html)
 	String result2 = "로그인 실패";
 	if(result ==1){
