@@ -20,6 +20,7 @@
 <body>
 <table class="table-dark table-striped">
 			<tr>
+
 				<th>이름</th>
 				<th>사진</th>
 
