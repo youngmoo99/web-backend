@@ -13,7 +13,6 @@
 	  result = result+s + " ";
   }
     %>
-
 <!DOCTYPE html>
 <html>
 <head>
