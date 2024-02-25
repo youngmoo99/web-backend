@@ -23,7 +23,6 @@
 		response.sendRedirect("http://localhost:9999/web01/select.jsp?id2="+id);
 	}
     %>
-    
 <!DOCTYPE html>
 <html>
 <head>
