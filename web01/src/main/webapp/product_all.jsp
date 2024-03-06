@@ -21,7 +21,6 @@
     ArrayList<ProductVO> list = dao.list();
     
     %>
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>
