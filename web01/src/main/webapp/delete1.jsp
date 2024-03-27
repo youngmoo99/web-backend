@@ -15,8 +15,7 @@
     
   String id = request.getParameter("id3"); // <input name ="id">, 외부에서 입력한 데이터타입(String)
   gasifanDAO dao = new gasifanDAO();
-  dao.delete(id);
-  	
+  dao.delete(id);	
     %>
 <!DOCTYPE html>
 <html>
